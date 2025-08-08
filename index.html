@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dijkstra's Algorithm Calculator</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Dijiktra’s Algorithm Calculator</h1>
+            <p>Discovering Optimal Routes Through Nodes Using Dijkstra's Method</p>
+        </div>
+
+        <div class="main-card">
+            <div class="section">
+                <h3 class="form-header">
+                    Select Path
+                </h3>
+
+                <div class="form-group">
+                    <label for="fromNode">From Node</label>
+                    <select id="fromNode" class="form-control">
+                        <option value="" disabled selected>Select</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="toNode">To Node</label>
+                    <select id="toNode" class="form-control">
+                        <option value="" disabled selected>Select</option>
+                    </select>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-clear" onclick="clearForm()">
+                        Clear
+                    </button>
+                    <button class="btn btn-calculate" onclick="calculate()">
+                        Calculate
+                        <img src="./assets/calculator.svg" alt="">
+                    </button>
+                </div>
+            </div>
+
+            <div class="image-section" id="imageSection">
+                <img src="./assets/right-image.svg" height="205" width="190" alt="">
+            </div>
+
+            <div class="section result-section" id="resultSection">
+                <h4 class="result-header">
+                    Result
+                </h4>
+
+                <div class="result-card">
+                    <div id="pathResult">
+                    </div>
+                    <div id="distanceResult">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
